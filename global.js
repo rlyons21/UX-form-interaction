@@ -2,12 +2,19 @@ window.addEventListener("load", function(){
 	var addAlbumBtn = document.getElementsByClassName("addAlbum");
 	var formContainer = document.getElementsByClassName("formsContainer");
 	var exitForm = document.getElementsByClassName("exitForm");
+	var forms = document.getElementsByClassName("form");
 	var nextForm = document.getElementsByClassName("nextForm");
 	var prevForm = document.getElementsByClassName("prevForm"); 
+
+	for(i=0; i < forms.length; i++){
+		forms[i].style.display = "none";
+	}
+
 
 	addAlbumBtn[0].addEventListener("click", function(link){
 		link.preventDefault();
 		formContainer[0].style.display = "flex";
+		forms[0].style.display = "inline";
 		
 	});
 
@@ -21,8 +28,12 @@ window.addEventListener("load", function(){
 		get_info.addEventListener("load", function(e){
 			var r = e.target.response;
 			var response = JSON.parse(r);
+			var artistName = document.getElementsByClassName("artistName")[0].value.split(" ").join("_");
+			var albumTitle = document.getElementsByClassName("albumTitle")[0].value.split(" ").join("_");
 
-			if(response.hasOwnProperty("Selena_Gomez")){
+debugger;
+
+			if(response.hasOwnProperty(artistName) && response[artistName].albums.hasOwnProperty(albumTitle)){
 				alert("nope");
 			}
 
