@@ -5,6 +5,7 @@ window.addEventListener("load", function(){
 	var forms = document.getElementsByClassName("form");
 	var nextForm = document.getElementsByClassName("nextForm");
 	var prevForm = document.getElementsByClassName("prevForm"); 
+	var addMember = document.getElementById("addAnotherMember");
 
 	for(i=0; i < forms.length; i++){
 		forms[i].style.display = "none";
@@ -20,6 +21,9 @@ window.addEventListener("load", function(){
 
 	exitForm[0].addEventListener("click", function(){
 		formContainer[0].style.display = "none";
+		for(i=0; i<forms.length; i++){
+			forms[i].style.display = "none";
+		}
 	});
 
 	nextForm[0].addEventListener("click", function(){
@@ -31,11 +35,14 @@ window.addEventListener("load", function(){
 			var artistName = document.getElementsByClassName("artistName")[0].value.split(" ").join("_");
 			var albumTitle = document.getElementsByClassName("albumTitle")[0].value.split(" ").join("_");
 
-debugger;
 
 			if(response.hasOwnProperty(artistName) && response[artistName].albums.hasOwnProperty(albumTitle)){
-				alert("nope");
+				alert("This artist's album aready exists in our records.");
+			} else{
+				forms[0].style.display = "none";
+				forms[1].style.display = "inline";
 			}
+
 
 		});
 
@@ -43,6 +50,30 @@ debugger;
 		get_info.send();
 	});
 
+	addMember.addEventListener("click", function(){
+		var MIform = document.getElementById("form_2");
+		var member = document.getElementsByClassName("members");
+		var instrument = document.getElementsByClassName("instruments");
+		var n = member.length;
+		member[n-1].style.display = "none";
+		instrument[n-1].style.display = "none";
+
+		var newMember = document.createElement("input");
+		newMember.setAttribute("type", "text");
+		newMember.setAttribute("class", "members");
+		newMember.setAttribute("id", "members_" + n)
+		newMember.setAttribute("placeholder", "Name");
+
+		var newInstrument = document.createElement("input");
+		newInstrument.setAttribute("type", "text");
+		newInstrument.setAttribute("class", "instruments");
+		newInstrument.setAttribute("id", "instruments_" + n);
+		newInstrument.setAttribute("placeholder", "Instruments");
+
+		MIform.appendChild(newMember);
+		MIform.appendChild(newInstrument);
+
+	});
 
 
 });
