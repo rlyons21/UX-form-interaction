@@ -18,42 +18,45 @@
 		<a class="addAlbum" href="#">ADD AN ALBUM</a>
 	</div>
 
-	<div class="formsContainer">
-		<div class="exitForm">X</div>
+	<form>
+		<div class="formsContainer">
+			<div class="exitForm">X</div>
 
 
 
-		<div class="form" id="form_1">
-			<form>
+			<div class="form" id="part_1">
+				
 				Album Title<br>
-				<input class="albumTitle" type="text"><br>
+				<input class="albumTitle" type="text" name="albumTitle"><br>
 				Artist Name<br>
-				<input class="artistName" type="text"><br>
-			</form>
+				<input class="artistName" type="text" name="artistName"><br>
 
-			<div class="nextForm"> > </div>
-		</div>
-
+				<div class="nextForm" id="next_1"> > </div>
+			</div>
 
 
-		<div class="form" id="form_2">
-			<form>
+			<div class="form" id="part_2">
+				
 				Add "X" members<br>
-				<input class="members" id="members_0" type="text" placeholder="Name..."><br>
-				<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..."><br>
-			</form>
+				<input class="members" id="members_0" type="text" placeholder="Name..." name="members_0"><br>
+				<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..." name="instruments_0"><br>
 
-			<div class="repeatForm" id="addAnotherMember"> + </div>
-			<div class="previous" id="goBackMember"> < </div>
-			
-			<div class="switchContainer">
-				<div class="prevForm"> < </div>
-				<div class="nextForm"> > </div>
+				<div class="repeatForm" id="addAnotherMember"> + </div>
+				<div class="previous" id="goBackMember"> < </div>
+				
+				<div class="switchContainer">
+					<div class="prevForm" id="prev_1"> < </div>
+					<div class="nextForm" id ="next_2"> > </div>
+				</div>
+
 			</div>
 
 		</div>
+	</form>
 
 
+
+<!--
 
 		<div class= "form" id="form_3">
 			<form>
@@ -67,7 +70,9 @@
 				<div class="nextForm"> > </div>
 			</div>
 
-	</div>
+		</div>
+
+	-->
 
 
 

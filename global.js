@@ -55,22 +55,32 @@ window.addEventListener("load", function(){
 
 	for(i=1; i<nextForm.length; i++){
 		nextForm[i].addEventListener("click", function(){
+			var id = this.getAttribute("id");
+			forms[parseInt(id.slice(-1))-1].style.display = "none";
+			forms[parseInt(id.slice(-1))].style.display = "inline";
+		});
+	}
 
+	for(i=0; i < prevForm.length; i++){
+		prevForm[i].addEventListener("click", function(){
+			var id = this.getAttribute("id");
+			forms[parseInt(id.slice(-1))].style.display = "none";
+			forms[parseInt(id.slice(-1))-1].style.display = "inline";
 		});
 	}
 
 	addMember.addEventListener("click", function(){
-		var previous = document.getElementsByClassName("previous");
-		var MIform = document.getElementById("form_2");
+		var previousBtn = document.getElementsByClassName("previous");
+		var MIform = document.getElementById("part_2");
 		var member = document.getElementsByClassName("members");
 		var instrument = document.getElementsByClassName("instruments");
 		var n = member.length;
 		member[n-1].style.display = "none";
 		instrument[n-1].style.display = "none";
 
-		if(previous[0].currentStyle ?  previous[0].currentStyle.display :
-                          getComputedStyle(previous[0], null).display == "none"){
-			previous[0].style.display = "block";
+		if(previousBtn[0].currentStyle ?  previousBtn[0].currentStyle.display :
+                          getComputedStyle(previousBtn[0], null).display == "none"){
+			previousBtn[0].style.display = "block";
 		}
 
 		var newMember = document.createElement("input");
@@ -78,12 +88,14 @@ window.addEventListener("load", function(){
 		newMember.setAttribute("class", "members");
 		newMember.setAttribute("id", "members_" + n)
 		newMember.setAttribute("placeholder", "Name...");
+		newMember.setAttribute("name", "members_" + n)
 
 		var newInstrument = document.createElement("input");
 		newInstrument.setAttribute("type", "text");
 		newInstrument.setAttribute("class", "instruments");
 		newInstrument.setAttribute("id", "instruments_" + n);
 		newInstrument.setAttribute("placeholder", "Instrument(s)...");
+		newInstrument.setAttribute("name", "instruments_" + n);
 
 		MIform.appendChild(newMember);
 		MIform.appendChild(newInstrument);
