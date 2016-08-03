@@ -124,7 +124,27 @@ window.addEventListener("load", function(){
 		newImage.setAttribute("id", "images_" + x);
 		newImage.setAttribute("name", "images_" + x);
 
+		var option1 = document.createElement("option");
+		option1.text = "ALBUM COVER";
+		option1.value = "albumCover_" + x;
+
+		var option2 = document.createElement("option");
+		option2.text = "ALBUM BACK";
+		option2.value = "albumBack_" + x;
+
+		var option3 = document.createElement("option");
+		option3.text = "ALTERNATE ALBUM COVER";
+		option3.value = "altCover_" + x;
+
+		var option4 = document.createElement("option");
+		option4.text = "EXTRA ALBUM ART";
+		option4.value = "extraArt_" + x;
+
 		AIform.appendChild(newImage);
+		newImage.appendChild(option1);
+		newImage.appendChild(option2);
+		newImage.appendChild(option3);
+		newImage.appendChild(option4);
 
 	});
 
