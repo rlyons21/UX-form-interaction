@@ -114,6 +114,17 @@ window.addEventListener("load", function(){
 	});
 
 	addImage.addEventListener("click", function(){
+		var AIform = document.getElementById("part_4");
+		var image = document.getElementsByClassName("images");
+		var x = image.length;
+
+		var newImage = document.createElement("select");
+		newImage.setAttribute("form", "addAlbum");
+		newImage.setAttribute("class", "images");
+		newImage.setAttribute("id", "images_" + x);
+		newImage.setAttribute("name", "images_" + x);
+
+		AIform.appendChild(newImage);
 
 	});
 
