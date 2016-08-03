@@ -110,4 +110,14 @@ body{
 }
 
 
+.chooseFile{
+	height:35px;
+	width:100px;
+	border-radius: 5px;
+	outline: 0;
+	background-color: #D7D6D7;
+	font-family: Helvetica;
+	font-size:14px;
+}
+
 

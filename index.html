@@ -18,7 +18,7 @@
 		<a class="addAlbum" href="#">ADD AN ALBUM</a>
 	</div>
 
-	<form>
+	<form id="addAlbum">
 		<div class="formsContainer">
 			<div class="exitForm">X</div>
 
@@ -49,6 +49,42 @@
 					<div class="nextForm" id ="next_2"> > </div>
 				</div>
 
+			</div>
+
+
+			<div class= "form" id="part_3">
+			
+				"X" location<br>
+				<input class="location" type="text" placeholder="City name..." name="location"><br>
+				"X" image<br>
+				<button class="chooseFile">Choose File</button>
+
+				<div class="switchContainer">
+					<div class="prevForm" id="prev_2"> < </div>
+					<div class="nextForm" id="next_3"> > </div>
+				</div>
+
+			</div>
+
+
+			<div class="form" id="part_4">
+
+				Album Images<br>
+				<select form="addAlbum">
+					<option value="albumCover">ALBUM COVER</option>
+					<option value="albumBack">ALBUM BACK</option>
+					<option value="altCover">ALTERNATE ALBUM COVER</option>
+					<option value="extraArt">EXTRA ALBUM ART</option>
+				</select>
+
+				<br><button class="chooseFile">Choose File</button>
+
+				<div class="repeatForm" id="addAnotherImage"> + </div>
+
+				<div class="switchContainer">
+					<div class="prevForm" id="prev_3"> < </div>
+					<div class="nextForm" id="next_4"> > </div>
+				</div>
 			</div>
 
 		</div>

@@ -6,6 +6,8 @@ window.addEventListener("load", function(){
 	var nextForm = document.getElementsByClassName("nextForm");
 	var prevForm = document.getElementsByClassName("prevForm"); 
 	var addMember = document.getElementById("addAnotherMember");
+	var previousBtn = document.getElementsByClassName("previous");
+	var addImage = document.getElementById("addAnotherImage");
 
 
 
@@ -53,6 +55,7 @@ window.addEventListener("load", function(){
 	});
 
 
+
 	for(i=1; i<nextForm.length; i++){
 		nextForm[i].addEventListener("click", function(){
 			var id = this.getAttribute("id");
@@ -69,8 +72,9 @@ window.addEventListener("load", function(){
 		});
 	}
 
+
+
 	addMember.addEventListener("click", function(){
-		var previousBtn = document.getElementsByClassName("previous");
 		var MIform = document.getElementById("part_2");
 		var member = document.getElementsByClassName("members");
 		var instrument = document.getElementsByClassName("instruments");
@@ -82,6 +86,7 @@ window.addEventListener("load", function(){
                           getComputedStyle(previousBtn[0], null).display == "none"){
 			previousBtn[0].style.display = "block";
 		}
+
 
 		var newMember = document.createElement("input");
 		newMember.setAttribute("type", "text");
@@ -101,6 +106,17 @@ window.addEventListener("load", function(){
 		MIform.appendChild(newInstrument);
 
 	});
+
+
+	previousBtn[0].addEventListener("click", function(){
+
+
+	});
+
+	addImage.addEventListener("click", function(){
+
+	});
+
 
 
 });
