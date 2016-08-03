@@ -8,6 +8,7 @@ window.addEventListener("load", function(){
 	var addMember = document.getElementById("addAnotherMember");
 	var previousBtn = document.getElementsByClassName("previous");
 	var addImage = document.getElementById("addAnotherImage");
+	var addTrack = document.getElementById("addAnotherTrack");
 
 
 
@@ -91,9 +92,9 @@ window.addEventListener("load", function(){
 		var newMember = document.createElement("input");
 		newMember.setAttribute("type", "text");
 		newMember.setAttribute("class", "members");
-		newMember.setAttribute("id", "members_" + n)
+		newMember.setAttribute("id", "members_" + n);
 		newMember.setAttribute("placeholder", "Name...");
-		newMember.setAttribute("name", "members_" + n)
+		newMember.setAttribute("name", "members_" + n);
 
 		var newInstrument = document.createElement("input");
 		newInstrument.setAttribute("type", "text");
@@ -108,15 +109,12 @@ window.addEventListener("load", function(){
 	});
 
 
-	previousBtn[0].addEventListener("click", function(){
-
-
-	});
 
 	addImage.addEventListener("click", function(){
 		var AIform = document.getElementById("part_4");
 		var image = document.getElementsByClassName("images");
 		var x = image.length;
+		image[x-1].style.display = "none";
 
 		var newImage = document.createElement("select");
 		newImage.setAttribute("form", "addAlbum");
@@ -149,5 +147,19 @@ window.addEventListener("load", function(){
 	});
 
 
+	addTrack.addEventListener("click", function(){
+		var trackForm = document.getElementById("part_6");
+		var tracks = document.getElementsByClassName("tracks");
+		var y = tracks.length;
+
+		var newTrack = document.createElement("input");
+		newTrack.setAttribute("type", "text");
+		newTrack.setAttribute("class", "tracks");
+		newTrack.setAttribute("id", "tracks_" + y);
+		newTrack.setAttribute("placeholder", "Track title");
+		newTrack.setAttribute("name", "tracks_" + y);
+
+		trackForm.appendChild(newTrack);
+	});
 
 });
