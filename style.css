@@ -75,6 +75,7 @@ body{
 	font-family:helvetica;
 	font-size:30px;
 	text-align: center;
+	margin:10px;
 }
 
 .prevForm{
@@ -86,14 +87,27 @@ body{
 	font-family:helvetica;
 	font-size:30px;
 	text-align: center;
+	margin:10px;
 }
 
 .repeatForm{
 	height:50px;
 	width:20px;
 	background-color: grey;
+	float:right;
+	margin:10px;
+	text-align: center;
 }
 
+.previous{
+	height:50px;
+	width:20px;
+	background-color: grey;
+	float:left;
+	margin:10px;
+	text-align: center;
+	display:none;
+}
 
 
 

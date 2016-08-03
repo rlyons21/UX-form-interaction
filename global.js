@@ -7,6 +7,8 @@ window.addEventListener("load", function(){
 	var prevForm = document.getElementsByClassName("prevForm"); 
 	var addMember = document.getElementById("addAnotherMember");
 
+
+
 	for(i=0; i < forms.length; i++){
 		forms[i].style.display = "none";
 	}
@@ -50,7 +52,15 @@ window.addEventListener("load", function(){
 		get_info.send();
 	});
 
+
+	for(i=1; i<nextForm.length; i++){
+		nextForm[i].addEventListener("click", function(){
+
+		});
+	}
+
 	addMember.addEventListener("click", function(){
+		var previous = document.getElementsByClassName("previous");
 		var MIform = document.getElementById("form_2");
 		var member = document.getElementsByClassName("members");
 		var instrument = document.getElementsByClassName("instruments");
@@ -58,17 +68,22 @@ window.addEventListener("load", function(){
 		member[n-1].style.display = "none";
 		instrument[n-1].style.display = "none";
 
+		if(previous[0].currentStyle ?  previous[0].currentStyle.display :
+                          getComputedStyle(previous[0], null).display == "none"){
+			previous[0].style.display = "block";
+		}
+
 		var newMember = document.createElement("input");
 		newMember.setAttribute("type", "text");
 		newMember.setAttribute("class", "members");
 		newMember.setAttribute("id", "members_" + n)
-		newMember.setAttribute("placeholder", "Name");
+		newMember.setAttribute("placeholder", "Name...");
 
 		var newInstrument = document.createElement("input");
 		newInstrument.setAttribute("type", "text");
 		newInstrument.setAttribute("class", "instruments");
 		newInstrument.setAttribute("id", "instruments_" + n);
-		newInstrument.setAttribute("placeholder", "Instruments");
+		newInstrument.setAttribute("placeholder", "Instrument(s)...");
 
 		MIform.appendChild(newMember);
 		MIform.appendChild(newInstrument);
