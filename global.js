@@ -132,8 +132,8 @@ window.addEventListener("load", function(){
 		newInstrument.setAttribute("placeholder", "Instrument(s)...");
 		newInstrument.setAttribute("name", "instruments_" + n);
 
-		MIform.appendChild(newMember);
-		MIform.appendChild(newInstrument);
+		MIform.insertBefore(newMember,MIform.childNodes[2]);
+		MIform.insertBefore(newInstrument, MIform.childNodes[3]);
 
 	});
 

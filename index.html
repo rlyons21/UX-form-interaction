@@ -14,8 +14,8 @@
 		<div class="header">
 			<div class="header__leftContainer">
 				<div class="recordPlayerImg"></div>
-				<div>The Vinyl Archive </div>
-				<div> by Hear Nebraska</div> 
+				<p>The Vinyl Archive</p>
+				<p class="header__by">by Hear Nebraska</p> 
 			</div>
 
 			<a class="addAlbum" href="#">ADD AN ALBUM</a>
@@ -33,6 +33,7 @@
 					<input class="albumTitle" type="text" name="albumTitle"><br>
 					Artist Name<br>
 					<input class="artistName" type="text" name="artistName"><br>
+					<p class="instruction">Separate multiple artists with a comma.</p>
 
 					<div class="nextForm" id="next_1"> > </div>
 				</div>
@@ -41,8 +42,10 @@
 				<div class="form" id="part_2">
 					
 					<p class="artistMembers">Add "X" members</p><br>
-					<input class="members" id="members_0" type="text" placeholder="Name..." name="members_0"><br>
-					<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..." name="instruments_0"><br>
+					<div>
+						<input class="members" id="members_0" type="text" placeholder="Name..." name="members_0"><br>
+						<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..." name="instruments_0"><br>
+					<p class="instruction">Separate multiple instruments with a comma.</p>
 
 					<div class="repeatForm" id="addAnotherMember"> + </div>
 					<div class="previous" id="goBackMember"> < </div>

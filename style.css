@@ -29,6 +29,11 @@ body{
 	align-items: center;
 }
 
+.header__by{
+	margin-left:5px;
+	font-size:15px;
+}
+
 .recordPlayerImg{
 	height:90px;
 	width:80px;
@@ -49,11 +54,36 @@ body{
 	width:900px;
 	position:absolute;
 	top:0;
-	background-color: black;
+	background-color: #303030;
+	font-family: Arial;
+	font-size:18px;
 	color:white;
 	display:none;
 	justify-content: center;
 	align-items: center;
+}
+
+.form{
+	text-align: center;
+}
+
+.instruction{
+	font-family: Arial;
+	font-size: 14px;
+	color:#D1D1D1;
+	padding:0;
+	margin:0;
+}
+
+input{
+	border-radius: 5px;
+	height:25px;
+	width:250px;
+	background-color: #D1D1D1;
+	outline:0;
+	border: none;
+	margin-top:10px;
+	margin-bottom: 10px;
 }
 
 .exitForm{
@@ -72,6 +102,7 @@ body{
 
 .switchContainer{
 	display:flex;
+	align-items: center;
 }
 
 .nextForm{
@@ -130,7 +161,7 @@ body{
 
 .submit{
 	color:white;
-	background-color: black;
+	background-color: #303030;
 	font-family:Helvetica;
 	font-size:19px;
 	outline:0;
