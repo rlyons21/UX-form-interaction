@@ -8,134 +8,138 @@
 
 <body>
 
-	<div class="header">
-		<div class="header__leftContainer">
-			<div class="recordPlayerImg"></div>
-			<div>The Vinyl Archive </div>
-			<div> by Hear Nebraska</div> 
+	
+	<div class="wrapper">
+		
+		<div class="header">
+			<div class="header__leftContainer">
+				<div class="recordPlayerImg"></div>
+				<div>The Vinyl Archive </div>
+				<div> by Hear Nebraska</div> 
+			</div>
+
+			<a class="addAlbum" href="#">ADD AN ALBUM</a>
 		</div>
 
-		<a class="addAlbum" href="#">ADD AN ALBUM</a>
+		<form id="addAlbum">
+			<div class="formsContainer">
+				<div class="exitForm">X</div>
+
+
+
+				<div class="form" id="part_1">
+					
+					Album Title<br>
+					<input class="albumTitle" type="text" name="albumTitle"><br>
+					Artist Name<br>
+					<input class="artistName" type="text" name="artistName"><br>
+
+					<div class="nextForm" id="next_1"> > </div>
+				</div>
+
+
+				<div class="form" id="part_2">
+					
+					<p class="artistMembers">Add "X" members</p><br>
+					<input class="members" id="members_0" type="text" placeholder="Name..." name="members_0"><br>
+					<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..." name="instruments_0"><br>
+
+					<div class="repeatForm" id="addAnotherMember"> + </div>
+					<div class="previous" id="goBackMember"> < </div>
+					
+					<div class="switchContainer">
+						<div class="prevForm" id="prev_1"> < </div>
+						<div class="nextForm" id ="next_2"> > </div>
+					</div>
+
+				</div>
+
+
+				<div class= "form" id="part_3">
+				
+					<p class="artistLocation">"X" location</p><br>
+					<input class="location" type="text" placeholder="City name..." name="location"><br>
+					<p class="artistImage">X" image</p><br>
+					<button class="chooseFile">Choose File</button>
+
+					<div class="switchContainer">
+						<div class="prevForm" id="prev_2"> < </div>
+						<div class="nextForm" id="next_3"> > </div>
+					</div>
+
+				</div>
+
+
+				<div class="form" id="part_4">
+
+					Album Images<br>
+					<select form="addAlbum" class="images" id="image_0" name="image_0">
+						<option value="albumCover_1">ALBUM COVER</option>
+						<option value="albumBack_1">ALBUM BACK</option>
+						<option value="altCover_1">ALTERNATE ALBUM COVER</option>
+						<option value="extraArt_1">EXTRA ALBUM ART</option>
+					</select>
+
+					<br><button class="chooseFile">Choose File</button>
+
+					<div class="repeatForm" id="addAnotherImage"> + </div>
+					<div class="previous" id="goBackImage"> < </div>
+
+					<div class="switchContainer">
+						<div class="prevForm" id="prev_3"> < </div>
+						<div class="nextForm" id="next_4"> > </div>
+					</div>
+				</div>
+
+
+				<div class="form" id="part_5">
+					Album Genre<br>
+					<input class="albumGenre" type="text" name="albumGenre"><br>
+					Release Date<br>
+					<input class="releaseDate" type="text" name="releaseDate"><br>
+					Album Format<br>
+					<select form="addAlbum">
+						<option>LP</option>
+						<option>EP</option>
+					</select>
+
+					<div class="switchContainer">
+						<div class="prevForm" id="prev_4"> < </div>
+						<div class="nextForm" id="next_5"> > </div>
+					</div>
+
+				</div>
+
+
+
+				<div class="form" id="part_6">
+					<p class="trackCount">TRACK 1</p><br><br>
+					Album Tracks<br>
+					<input class="tracks" id="track_1" name="track_1" tpye="text" placeholder="Track title...">
+					<br><button class="chooseFile">Upload Song</button>
+
+					<div class="repeatForm" id="addAnotherTrack"> + </div>
+					<div class="previous" id="goBackTrack"> < </div>
+					
+					<div class="switchContainer">
+						<div class="prevForm" id="prev_5"> < </div>
+					</div>
+
+					<input class="submit" type="submit" value="SAVE ALBUM">
+				</div>
+
+
+
+
+				<div class="form" id="part_7">
+					<p> Thank you for uploading "X" by artist </p>
+					<a class="addAlbum" href="#">ADD ANOTHER ALBUM</a>
+				</div>
+
+			</div>
+		</form>
+
 	</div>
-
-	<form id="addAlbum">
-		<div class="formsContainer">
-			<div class="exitForm">X</div>
-
-
-
-			<div class="form" id="part_1">
-				
-				Album Title<br>
-				<input class="albumTitle" type="text" name="albumTitle"><br>
-				Artist Name<br>
-				<input class="artistName" type="text" name="artistName"><br>
-
-				<div class="nextForm" id="next_1"> > </div>
-			</div>
-
-
-			<div class="form" id="part_2">
-				
-				<p class="artistMembers">Add "X" members</p><br>
-				<input class="members" id="members_0" type="text" placeholder="Name..." name="members_0"><br>
-				<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..." name="instruments_0"><br>
-
-				<div class="repeatForm" id="addAnotherMember"> + </div>
-				<div class="previous" id="goBackMember"> < </div>
-				
-				<div class="switchContainer">
-					<div class="prevForm" id="prev_1"> < </div>
-					<div class="nextForm" id ="next_2"> > </div>
-				</div>
-
-			</div>
-
-
-			<div class= "form" id="part_3">
-			
-				<p class="artistLocation">"X" location</p><br>
-				<input class="location" type="text" placeholder="City name..." name="location"><br>
-				<p class="artistImage">X" image</p><br>
-				<button class="chooseFile">Choose File</button>
-
-				<div class="switchContainer">
-					<div class="prevForm" id="prev_2"> < </div>
-					<div class="nextForm" id="next_3"> > </div>
-				</div>
-
-			</div>
-
-
-			<div class="form" id="part_4">
-
-				Album Images<br>
-				<select form="addAlbum" class="images" id="image_0" name="image_0">
-					<option value="albumCover_1">ALBUM COVER</option>
-					<option value="albumBack_1">ALBUM BACK</option>
-					<option value="altCover_1">ALTERNATE ALBUM COVER</option>
-					<option value="extraArt_1">EXTRA ALBUM ART</option>
-				</select>
-
-				<br><button class="chooseFile">Choose File</button>
-
-				<div class="repeatForm" id="addAnotherImage"> + </div>
-				<div class="previous" id="goBackImage"> < </div>
-
-				<div class="switchContainer">
-					<div class="prevForm" id="prev_3"> < </div>
-					<div class="nextForm" id="next_4"> > </div>
-				</div>
-			</div>
-
-
-			<div class="form" id="part_5">
-				Album Genre<br>
-				<input class="albumGenre" type="text" name="albumGenre"><br>
-				Release Date<br>
-				<input class="releaseDate" type="text" name="releaseDate"><br>
-				Album Format<br>
-				<select form="addAlbum">
-					<option>LP</option>
-					<option>EP</option>
-				</select>
-
-				<div class="switchContainer">
-					<div class="prevForm" id="prev_4"> < </div>
-					<div class="nextForm" id="next_5"> > </div>
-				</div>
-
-			</div>
-
-
-
-			<div class="form" id="part_6">
-				<p class="trackCount">TRACK 1</p><br><br>
-				Album Tracks<br>
-				<input class="tracks" id="track_1" name="track_1" tpye="text" placeholder="Track title...">
-				<br><button class="chooseFile">Upload Song</button>
-
-				<div class="repeatForm" id="addAnotherTrack"> + </div>
-				<div class="previous" id="goBackTrack"> < </div>
-				
-				<div class="switchContainer">
-					<div class="prevForm" id="prev_5"> < </div>
-				</div>
-
-				<input class="submit" type="submit" value="SAVE ALBUM">
-			</div>
-
-
-
-
-			<div class="form" id="part_7">
-				<p> Thank you for uploading "X" by artist </p>
-				<a class="addAlbum" href="#">ADD ANOTHER ALBUM</a>
-			</div>
-
-		</div>
-	</form>
-
 
 </body>
 </html>
