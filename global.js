@@ -109,8 +109,12 @@ window.addEventListener("load", function(){
 		var member = document.getElementsByClassName("members");
 		var instrument = document.getElementsByClassName("instruments");
 		var n = member.length;
-		member[n-1].style.display = "none";
-		instrument[n-1].style.display = "none";
+		
+
+		for(i=0; i<n; i++){
+			member[i].style.display = "none";
+		instrument[i].style.display = "none";
+		}
 
 		if(previousBtn[0].currentStyle ?  previousBtn[0].currentStyle.display :
                           getComputedStyle(previousBtn[0], null).display == "none"){
@@ -124,6 +128,7 @@ window.addEventListener("load", function(){
 		newMember.setAttribute("id", "members_" + n);
 		newMember.setAttribute("placeholder", "Name...");
 		newMember.setAttribute("name", "members_" + n);
+		newMember.setAttribute("style", "display:inline");
 
 		var newInstrument = document.createElement("input");
 		newInstrument.setAttribute("type", "text");
@@ -133,7 +138,7 @@ window.addEventListener("load", function(){
 		newInstrument.setAttribute("name", "instruments_" + n);
 
 		MIform.insertBefore(newMember,MIform.childNodes[2]);
-		MIform.insertBefore(newInstrument, MIform.childNodes[3]);
+		MIform.insertBefore(newInstrument,MIform.childNodes[3]);
 
 	});
 
@@ -143,7 +148,10 @@ window.addEventListener("load", function(){
 		var AIform = document.getElementById("part_4");
 		var image = document.getElementsByClassName("images");
 		var x = image.length;
-		image[x-1].style.display = "none";
+
+		for(i=0; i<x; i++){
+			image[i].style.display = "none";
+		}
 
 		var newImage = document.createElement("select");
 		newImage.setAttribute("form", "addAlbum");
@@ -167,7 +175,7 @@ window.addEventListener("load", function(){
 		option4.text = "EXTRA ALBUM ART";
 		option4.value = "extraArt_" + x;
 
-		AIform.appendChild(newImage);
+		AIform.insertBefore(newImage, AIform.childNodes[3]);
 		newImage.appendChild(option1);
 		newImage.appendChild(option2);
 		newImage.appendChild(option3);
