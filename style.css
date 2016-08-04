@@ -167,3 +167,8 @@ input{
 	outline:0;
 	border:none;
 }
+
+.addMemberContainer{
+	display:flex;
+	flex-direction: column;
+}

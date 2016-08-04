@@ -105,7 +105,7 @@ window.addEventListener("load", function(){
 
 
 	addMember.addEventListener("click", function(){
-		var MIform = document.getElementById("part_2");
+		var MIform = document.getElementsByClassName("addMemberContainer")[0];
 		var member = document.getElementsByClassName("members");
 		var instrument = document.getElementsByClassName("instruments");
 		var n = member.length;
