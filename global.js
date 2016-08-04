@@ -9,6 +9,8 @@ window.addEventListener("load", function(){
 	var previousBtn = document.getElementsByClassName("previous");
 	var addImage = document.getElementById("addAnotherImage");
 	var addTrack = document.getElementById("addAnotherTrack");
+
+	var uploadBtn = document.getElementsByClassName("chooseFile");
 	
 	var membersTitle = document.getElementsByClassName("artistMembers");
 	var locationTitle = document.getElementsByClassName("artistLocation");
@@ -17,6 +19,11 @@ window.addEventListener("load", function(){
 	var trackCount = 1;
 
 
+	for(i=0; i<uploadBtn.length; i++){
+		uploadBtn[i].addEventListener("click", function(btn){
+			btn.preventDefault();
+		});
+	}
 
 	for(i=0; i < forms.length; i++){
 		forms[i].style.display = "none";
