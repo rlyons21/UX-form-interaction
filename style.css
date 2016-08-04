@@ -130,19 +130,17 @@ input{
 }
 
 .repeatForm{
-	height:50px;
-	width:20px;
+	height:75px;
+	width:30px;
 	background-color: grey;
-	float:right;
 	margin:10px;
 	text-align: center;
 }
 
 .previous{
-	height:50px;
-	width:20px;
+	height:75px;
+	width:30px;
 	background-color: grey;
-	float:left;
 	margin:10px;
 	text-align: center;
 	display:none;
@@ -166,6 +164,10 @@ input{
 	font-size:19px;
 	outline:0;
 	border:none;
+}
+
+.AMcontrols{
+	display:flex;
 }
 
 .addMemberContainer{
