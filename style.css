@@ -120,4 +120,11 @@ body{
 	font-size:14px;
 }
 
-
+.submit{
+	color:white;
+	background-color: black;
+	font-family:Helvetica;
+	font-size:19px;
+	outline:0;
+	border:none;
+}

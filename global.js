@@ -151,6 +151,7 @@ window.addEventListener("load", function(){
 		var trackForm = document.getElementById("part_6");
 		var tracks = document.getElementsByClassName("tracks");
 		var y = tracks.length;
+		tracks[y-1].style.display = "none";
 
 		var newTrack = document.createElement("input");
 		newTrack.setAttribute("type", "text");
