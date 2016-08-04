@@ -9,6 +9,12 @@ window.addEventListener("load", function(){
 	var previousBtn = document.getElementsByClassName("previous");
 	var addImage = document.getElementById("addAnotherImage");
 	var addTrack = document.getElementById("addAnotherTrack");
+	
+	var membersTitle = document.getElementsByClassName("artistMembers");
+	var locationTitle = document.getElementsByClassName("artistLocation");
+	var imageTitle = document.getElementsByClassName("artistImage");
+	var trackTitle = document.getElementsByClassName("trackCount");
+	var trackCount = 1;
 
 
 
@@ -46,6 +52,10 @@ window.addEventListener("load", function(){
 			} else{
 				forms[0].style.display = "none";
 				forms[1].style.display = "inline";
+				membersTitle[0].innerHTML = "Add " + document.getElementsByClassName("artistName")[0].value + "'s Members";
+				locationTitle[0].innerHTML = document.getElementsByClassName("artistName")[0].value + "'s Location";
+				imageTitle[0].innerHTML = document.getElementsByClassName("artistName")[0].value + "'s Image";
+
 			}
 
 
@@ -148,6 +158,9 @@ window.addEventListener("load", function(){
 
 
 	addTrack.addEventListener("click", function(){
+		trackCount += 1;
+		trackTitle[0].innerHTML = "TRACK " + trackCount;
+
 		var trackForm = document.getElementById("part_6");
 		var tracks = document.getElementsByClassName("tracks");
 		var y = tracks.length;
