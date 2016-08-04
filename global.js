@@ -18,6 +18,8 @@ window.addEventListener("load", function(){
 	var trackTitle = document.getElementsByClassName("trackCount");
 	var trackCount = 1;
 
+	var submitAlbum = document.getElementsByClassName("submit");
+
 
 	for(i=0; i<uploadBtn.length; i++){
 		uploadBtn[i].addEventListener("click", function(btn){
@@ -25,17 +27,23 @@ window.addEventListener("load", function(){
 		});
 	}
 
-	for(i=0; i < forms.length; i++){
-		forms[i].style.display = "none";
+	
+
+	for(i=0; i<addAlbumBtn.length; i++){
+
+
+		addAlbumBtn[i].addEventListener("click", function(link){
+			link.preventDefault();
+
+			for(i=0; i < forms.length; i++){
+				forms[i].style.display = "none";
+			}
+
+			formContainer[0].style.display = "flex";
+			forms[0].style.display = "inline";
+			
+		});
 	}
-
-
-	addAlbumBtn[0].addEventListener("click", function(link){
-		link.preventDefault();
-		formContainer[0].style.display = "flex";
-		forms[0].style.display = "inline";
-		
-	});
 
 	exitForm[0].addEventListener("click", function(){
 		formContainer[0].style.display = "none";
@@ -89,6 +97,10 @@ window.addEventListener("load", function(){
 			forms[parseInt(id.slice(-1))-1].style.display = "inline";
 		});
 	}
+
+	previousBtn[0].addEventListener("click", function(){
+
+	});
 
 
 
@@ -181,6 +193,13 @@ window.addEventListener("load", function(){
 		newTrack.setAttribute("name", "tracks_" + y);
 
 		trackForm.appendChild(newTrack);
+	});
+
+
+	submitAlbum[0].addEventListener("click", function(form){
+		form.preventDefault();
+		forms[5].style.display = "none";
+		forms[6].style.display = "inline";
 	});
 
 });
