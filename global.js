@@ -191,7 +191,10 @@ window.addEventListener("load", function(){
 		var trackForm = document.getElementById("part_6");
 		var tracks = document.getElementsByClassName("tracks");
 		var y = tracks.length;
-		tracks[y-1].style.display = "none";
+
+		for(i=0; i<y; i++){
+			tracks[i].style.display = "none";
+		}
 
 		var newTrack = document.createElement("input");
 		newTrack.setAttribute("type", "text");
@@ -200,7 +203,7 @@ window.addEventListener("load", function(){
 		newTrack.setAttribute("placeholder", "Track title");
 		newTrack.setAttribute("name", "tracks_" + y);
 
-		trackForm.appendChild(newTrack);
+		trackForm.insertBefore(newTrack, trackForm.childNodes[6]);
 	});
 
 
