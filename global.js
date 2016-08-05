@@ -103,9 +103,8 @@ window.addEventListener("load", function(){
 	previousBtn[0].addEventListener("click", function(){
 		for(i=0; i<members.length; i++){
 			if(members[i].style.display == "inline"){
-				var id = members[i].getAttribute("id");
 				members[i].style.display = "none";
-				instruments.style.display = "none";
+				instruments[i].style.display = "none";
 				members[i-1].style.display = "inline";
 				instruments[i-1].style.display = "inline";
 			}
