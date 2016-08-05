@@ -42,9 +42,9 @@
 				<div class="form" id="part_2">
 					
 					<p class="artistMembers">Add "X" members</p>
-					<div class="AMcontrols">
+					<div class="controls">
 						<div class="previous" id="goBackMember"> < </div>
-						<div class="addMemberContainer">
+						<div class="container">
 							<input class="members" id="members_0" type="text" placeholder="Name..." name="members_0">
 							<input class="instruments" id="instruments_0" type="text" placeholder="Instrument(s)..." name="instruments_0">
 						</div>
@@ -67,7 +67,7 @@
 					<p class="artistLocation">"X" location</p>
 					<input class="location" type="text" placeholder="City name..." name="location"><br>
 					<p class="artistImage">X" image</p>
-					<input class="chooseFile" type="button" value="Choose File">
+					<input class="chooseFile" type="button" value="Choose File" name="artistImage">
 					No file chosen
 
 					<div class="switchContainer">
@@ -81,17 +81,25 @@
 				<div class="form" id="part_4">
 
 					Album Images<br>
-					<select form="addAlbum" class="images" id="image_0" name="image_0">
-						<option value="albumCover_1">ALBUM COVER</option>
-						<option value="albumBack_1">ALBUM BACK</option>
-						<option value="altCover_1">ALTERNATE ALBUM COVER</option>
-						<option value="extraArt_1">EXTRA ALBUM ART</option>
-					</select>
+					<div class="controls">
+						<div class="previous" id="goBackImage"> < </div>
+						
+						<div class="container">
+							<select form="addAlbum" class="images" id="image_0" name="image_0">
+								<option value="albumCover_1">ALBUM COVER</option>
+								<option value="albumBack_1">ALBUM BACK</option>
+								<option value="altCover_1">ALTERNATE ALBUM COVER</option>
+								<option value="extraArt_1">EXTRA ALBUM ART</option>
+							</select>
 
-					<br><button class="chooseFile">Choose File</button>
+						<br><input class="chooseFile" type="button" value="Choose File" name="albumImage">
+						</div>
+						
+						<div class="repeatForm" id="addAnotherImage"> + </div>
+					</div>
 
-					<div class="repeatForm" id="addAnotherImage"> + </div>
-					<div class="previous" id="goBackImage"> < </div>
+					
+
 
 					<div class="switchContainer">
 						<div class="prevForm" id="prev_3"> < </div>
@@ -124,7 +132,7 @@
 					<p class="trackCount">TRACK 1</p>
 					<p>Album Tracks</p>
 					<input class="tracks" id="track_1" name="track_1" tpye="text" placeholder="Track title...">
-					<br><button class="chooseFile">Upload Song</button>
+					<br><input class="chooseFile" type="button" value="Upload Song" name="track">
 
 					<div class="repeatForm" id="addAnotherTrack"> + </div>
 					<div class="previous" id="goBackTrack"> < </div>

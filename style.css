@@ -156,6 +156,7 @@ input{
 	background-color: #D7D6D7;
 	font-family: Helvetica;
 	font-size:14px;
+	margin-top:5px;
 }
 
 .submit{
@@ -167,11 +168,12 @@ input{
 	border:none;
 }
 
-.AMcontrols{
+.controls{
 	display:flex;
 }
 
-.addMemberContainer{
+.container{
 	display:flex;
 	flex-direction: column;
 }
+
