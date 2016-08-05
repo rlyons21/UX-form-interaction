@@ -98,17 +98,29 @@ window.addEventListener("load", function(){
 		});
 	}
 
+
+
 	var members = document.getElementsByClassName("members");
 	var instruments = document.getElementsByClassName("instruments");
+	
 	previousBtn[0].addEventListener("click", function(){
 		for(i=0; i<members.length; i++){
 			if(members[i].style.display == "inline"){
+				var id = members[i].getAttribute("id");
+
+
 				members[i].style.display = "none";
-				instruments[i].style.display = "none";
-				members[i-1].style.display = "inline";
-				instruments[i-1].style.display = "inline";
+				document.getElementById("instruments_" + parseInt(id.slice(-1))).style.display = "none";
+
+				var d = parseInt(id.slice(-1))-1;
+				
+				document.getElementById("members_" + d).style.display = "inline";
+				document.getElementById("instruments_" + d).style.display = "inline";
+				break;
 			}
 		}
+
+		
 
 	});
 
@@ -148,7 +160,8 @@ window.addEventListener("load", function(){
 		newInstrument.setAttribute("name", "instruments_" + n);
 
 		MIform.insertBefore(newMember,MIform.childNodes[2]);
-		MIform.insertBefore(newInstrument,MIform.childNodes[3]);
+		MIform.insertBefore(newInstrument,MIform.childNodes[4]);
+
 
 	});
 
